@@ -18,7 +18,7 @@ position: fixed;
   float: left;
   display: block;
   color: black;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 25px;
@@ -93,7 +93,7 @@ img {
 }
 
 .intro {
-    background-image: url(hwy.jpg);
+    background-image: url(day.jpg);
     background-size: cover;
     background-position: center;
     line-height: 2.5em;
@@ -147,4 +147,16 @@ span {
   overflow: hidden;
   background-color: #f1f1f1;
 font-family: 'Roboto', sans-serif;
+}
+
+.wn {
+    text-align: center;
+}
+
+.price {
+    color: #c63434;
+}
+
+.summary {
+    background-color: white;
 }
