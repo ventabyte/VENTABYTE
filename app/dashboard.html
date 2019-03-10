@@ -3,66 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <title>Ventabyte Online</title>
-
-<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD6VV0mJtA7E7IVgqCf8ztV7p3GGNouw4w",
-    authDomain: "ventabyte-app.firebaseapp.com",
-    databaseURL: "https://ventabyte-app.firebaseio.com",
-    projectId: "ventabyte-app",
-    storageBucket: "ventabyte-app.appspot.com",
-    messagingSenderId: "339678020380"
-  };
-  firebase.initializeApp(config);
-</script>
-    <script type="text/javascript">
-      initApp = function() {
-        firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-            // User is signed in.
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var uid = user.uid;
-            var phoneNumber = user.phoneNumber;
-            var providerData = user.providerData;
-            user.getIdToken().then(function(accessToken) {
-              document.getElementById('sign-in-status').textContent = 'Signed in';
-              document.getElementById('sign-in').textContent = 'Sign out';
-              document.getElementById('account-details').textContent = JSON.stringify({
-                displayName: displayName,
-                email: email,
-                emailVerified: emailVerified,
-                phoneNumber: phoneNumber,
-                photoURL: photoURL,
-                uid: uid,
-                accessToken: accessToken,
-                providerData: providerData
-              }, null, '  ');
-            });
-          } else {
-            // User is signed out.
-            document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').textContent = 'Sign in';
-            document.getElementById('account-details').textContent = 'null';
-          }
-        }, function(error) {
-          console.log(error);
-        });
-      };
-
-      window.addEventListener('load', function() {
-        initApp()
-      });
-    </script>
+      <link rel="stylesheet" type="text/css" href="login.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
-  <body>
-    <h1>Ventabyte Online</h1>
-    <div id="sign-in-status"></div>
-    <div id="sign-in"></div>
-    <div id="account-details"></div>
+              <body>
+     <div class="topnav" id="Topnav">
+<h1 class="navmenu">Ventabyte Online</h1>
+</div>
+<br>
+                  <br>
+                  <br>
+                  <br>
+<div class="icon-bar">
+  <a class="active" href="user.html"><i class="fas fa-user-circle"></i></a> 
+  <a href="tel:+16787235724"><i class="fas fa-phone"></i></a> 
+  <a href="mailto:contact@ventabyte.com"><i class="fa fa-envelope"></i></a> 
+    <a href="whatsapp:contact=+16787235724"><i class="fab fa-whatsapp"></i></a>
+  <a href="login.html"><i class="fas fa-times"></i></a> 
+</div>
+                  <br>
+                  <h2>Welcome **username**</h2>
+<div class="btn-group">
+  <button><a href="new_request.html"><i class="fas fa-plus-circle"></i> New Request</a></button>
+<button><a href="payment.html"><i class="fas fa-file-invoice-dollar"></i> Pay your bill</a></button>
+<button><a href="new_request.html"><i class="fab fa-usb"></i> Manage flash drives</a></button>
+</div>
   </body>
 </html>
